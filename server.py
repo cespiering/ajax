@@ -39,7 +39,9 @@ def index():
 def fortune():
     """Return a single fortune as a text string (*not* the whole HTML page!)"""
 
-    return random.choice(FORTUNES)
+    fortune = random.choice(FORTUNES)
+
+    return jsonify(fortune)
 
 
 @app.route('/weather.json')
